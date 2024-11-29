@@ -13,7 +13,7 @@ interface Docteur {
   updatedAt: Date;
 }
 
-interface Clients {
+interface Client {
   id: number;
   nom: string;
   prenom: string;
@@ -41,4 +41,4 @@ interface RendezVous {
 }
 
 
-export {Docteur, Clients, RendezVous}
+export {Docteur, Client, RendezVous}
