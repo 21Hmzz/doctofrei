@@ -1,327 +1,83 @@
 {
-  "clients": [
+  "specialites": [
     {
-      "id": "1",
-      "nom": "Dupont",
-      "prenom": "Jean",
-      "email": "jean.dupont@example.com",
-      "telephone": "0612345678",
-      "date_naissance": "1985-04-15",
-      "adresse": "10 Rue de Paris",
-      "ville": "Paris",
-      "code_postal": "75001",
-      "mot_de_passe": "$2b$10$abcdef123456abcdef123456abcdef123456abcdef123456abcdef12",
-      "date_creation": "2024-11-29T10:45:00Z"
+      "id": 1,
+      "nom": "Cardiologie"
     },
     {
-      "id": "2",
-      "nom": "Martin",
-      "prenom": "Claire",
-      "email": "claire.martin@example.com",
-      "telephone": "0623456789",
-      "date_naissance": "1990-08-22",
-      "adresse": "5 Avenue des Champs",
-      "ville": "Lyon",
-      "code_postal": "69002",
-      "mot_de_passe": "$2b$10$123456abcdef123456abcdef123456abcdef123456abcdef12345678",
-      "date_creation": "2024-11-28T09:30:00Z"
+      "id": 2,
+      "nom": "Dermatologie"
     },
     {
-      "id": "3",
-      "nom": "Nguyen",
-      "prenom": "Léa",
-      "email": "lea.nguyen@example.com",
-      "telephone": "0634567890",
-      "date_naissance": "2000-12-05",
-      "adresse": "12 Boulevard Haussmann",
-      "ville": "Marseille",
-      "code_postal": "13001",
-      "mot_de_passe": "$2b$10$abcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdef",
-      "date_creation": "2024-11-25T14:15:00Z"
+      "id": 3,
+      "nom": "Pédiatrie"
     },
     {
-      "id": "4",
-      "nom": "Morel",
-      "prenom": "Pierre",
-      "email": "pierre.morel@example.com",
-      "telephone": "0645678901",
-      "date_naissance": "1975-03-10",
-      "adresse": "22 Place Bellecour",
-      "ville": "Nice",
-      "code_postal": "06000",
-      "mot_de_passe": "$2b$10$123abc456def123abc456def123abc456def123abc456def123abc4",
-      "date_creation": "2024-11-20T17:00:00Z"
+      "id": 4,
+      "nom": "Orthopédie"
     },
     {
-      "id": "5",
-      "nom": "Bernard",
-      "prenom": "Sophie",
-      "email": "sophie.bernard@example.com",
-      "telephone": "0656789012",
-      "date_naissance": "1995-06-18",
-      "adresse": "8 Rue Victor Hugo",
-      "ville": "Bordeaux",
-      "code_postal": "33000",
-      "mot_de_passe": "$2b$10$def123abc456def123abc456def123abc456def123abc456def1234",
-      "date_creation": "2024-11-27T11:00:00Z"
-    },
-    {
-      "id": "6",
-      "nom": "Leclerc",
-      "prenom": "Lucas",
-      "email": "lucas.leclerc@example.com",
-      "telephone": "0678901234",
-      "date_naissance": "1988-09-12",
-      "adresse": "18 Avenue Foch",
-      "ville": "Strasbourg",
-      "code_postal": "67000",
-      "mot_de_passe": "$2b$10$abc123def456abc123def456abc123def456abc123def456abc123d",
-      "date_creation": "2024-11-22T15:45:00Z"
-    },
-    {
-      "id": "7",
-      "nom": "Rousseau",
-      "prenom": "Emma",
-      "email": "emma.rousseau@example.com",
-      "telephone": "0689012345",
-      "date_naissance": "1992-02-24",
-      "adresse": "3 Place Kleber",
-      "ville": "Toulouse",
-      "code_postal": "31000",
-      "mot_de_passe": "$2b$10$789abc123def456abc123def456abc123def456abc123def456789a",
-      "date_creation": "2024-11-26T08:30:00Z"
-    },
-    {
-      "id": "8",
-      "nom": "Fontaine",
-      "prenom": "Maxime",
-      "email": "maxime.fontaine@example.com",
-      "telephone": "0690123456",
-      "date_naissance": "1980-11-03",
-      "adresse": "9 Boulevard Gambetta",
-      "ville": "Montpellier",
-      "code_postal": "34000",
-      "mot_de_passe": "$2b$10$def789abc123def789abc123def789abc123def789abc123def789a",
-      "date_creation": "2024-11-21T12:00:00Z"
-    },
-    {
-      "id": "9",
-      "nom": "Durand",
-      "prenom": "Camille",
-      "email": "camille.durand@example.com",
-      "telephone": "0611121314",
-      "date_naissance": "1998-07-08",
-      "adresse": "7 Rue Lafayette",
-      "ville": "Rennes",
-      "code_postal": "35000",
-      "mot_de_passe": "$2b$10$456789abc123456789abc123456789abc123456789abc123456789a",
-      "date_creation": "2024-11-24T16:20:00Z"
-    },
-    {
-      "id": "10",
-      "nom": "Girard",
-      "prenom": "Thomas",
-      "email": "thomas.girard@example.com",
-      "telephone": "0622232425",
-      "date_naissance": "1979-01-14",
-      "adresse": "21 Allée des Tilleuls",
-      "ville": "Nantes",
-      "code_postal": "44000",
-      "mot_de_passe": "$2b$10$abcdef123456abcdef123456abcdef123456abcdef123456abcdef12",
-      "date_creation": "2024-11-23T14:10:00Z"
-    },
+      "id": 5,
+      "nom": "Gynécologie"
+    }
+  ],
+  "utilisateurs": [
     {
       "id": "1dc7",
       "nom": "Hamza",
       "prenom": "Bella",
       "email": "hamza.bella2107@gmail.com",
       "password": "$2a$10$1qdijfAql2Jz//LRIvzCqOaLOr0fS.O7ZW5BYnGD2bj2PWkqWJ32m",
-      "confirmPassword": "hamzabella",
       "telephone": "0652865074",
       "dateNaissance": "2024-11-29",
       "adresse": "5 avenue de verdun",
       "ville": "Paray-vieille-poste",
       "codePostal": "91550",
+      "role": "client",
       "createdAt": "2024-11-29T10:26:09.047Z"
+    },
+    {
+      "id": "2",
+      "nom": "Alice",
+      "prenom": "Moreau",
+      "email": "alice.moreau@example.com",
+      "password": "$2b$10$abcdef123456abcdef123456abcdef123456abcdef123456abcdef12",
+      "telephone": "0612345678",
+      "role": "docteur",
+      "createdAt": "2024-11-29T10:45:00Z"
     }
   ],
   "docteurs": [
     {
-      "id": "1",
-      "nom": "Moreau",
-      "prenom": "Alice",
-      "email": "alice.moreau@example.com",
-      "telephone": "0612345678",
-      "specialites": "Cardiologie",
+      "id_utilisateur": 2,
+      "specialites": [1, 3],
       "adresse_cabinet": "15 Rue de la Santé",
       "ville": "Paris",
-      "code_postal": "75005",
-      "mot_de_passe": "$2b$10$abcdef123456abcdef123456abcdef123456abcdef123456abcdef12",
-      "date_creation": "2024-11-29T10:45:00Z"
-    },
-    {
-      "id": "2",
-      "nom": "Durand",
-      "prenom": "Marc",
-      "email": "marc.durand@example.com",
-      "telephone": "0623456789",
-      "specialites": "Dermatologie",
-      "adresse_cabinet": "20 Avenue de l'Épiderme",
-      "ville": "Lyon",
-      "code_postal": "69003",
-      "mot_de_passe": "$2b$10$123456abcdef123456abcdef123456abcdef123456abcdef12345678",
-      "date_creation": "2024-11-28T09:30:00Z"
-    },
-    {
-      "id": "3",
-      "nom": "Lemoine",
-      "prenom": "Sophie",
-      "email": "sophie.lemoine@example.com",
-      "telephone": "0634567890",
-      "specialites": "Pédiatrie",
-      "adresse_cabinet": "25 Boulevard des Enfants",
-      "ville": "Marseille",
-      "code_postal": "13006",
-      "mot_de_passe": "$2b$10$abcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdef",
-      "date_creation": "2024-11-25T14:15:00Z"
-    },
-    {
-      "id": "4",
-      "nom": "Bernard",
-      "prenom": "Thomas",
-      "email": "thomas.bernard@example.com",
-      "telephone": "0645678901",
-      "specialites": "Orthopédie",
-      "adresse_cabinet": "10 Place de la Colonne Vertébrale",
-      "ville": "Nice",
-      "code_postal": "06000",
-      "mot_de_passe": "$2b$10$123abc456def123abc456def123abc456def123abc456def123abc4",
-      "date_creation": "2024-11-20T17:00:00Z"
-    },
-    {
-      "id": "5",
-      "nom": "Martin",
-      "prenom": "Claire",
-      "email": "claire.martin@example.com",
-      "telephone": "0656789012",
-      "specialites": "Gynécologie",
-      "adresse_cabinet": "8 Rue des Femmes",
-      "ville": "Bordeaux",
-      "code_postal": "33000",
-      "mot_de_passe": "$2b$10$def123abc456def123abc456def123abc456def123abc456def1234",
-      "date_creation": "2024-11-27T11:00:00Z"
+      "code_postal": "75005"
     }
   ],
   "rendezvous": [
     {
-      "id": "1",
-      "id_docteur": 1,
-      "id_client": 2,
-      "date_rendezvous": "2024-12-05",
-      "heure_debut": "09:30",
-      "heure_fin": "10:00",
-      "statut": "Confirmé",
-      "motif": "Consultation de suivi",
-      "date_creation": "2024-11-28T08:45:00Z"
+      "id": 1,
+      "idDocteur": 2,
+      "idClient": "1dc7",
+      "date": "2024-12-01T00:00:00Z",
+      "heureDebut": "2024-12-01T10:00:00Z",
+      "heureFin": "2024-12-01T10:30:00Z",
+      "status": "confirmé",
+      "motif": "Consultation de routine",
+      "createdAt": "2024-11-29T12:00:00Z"
     },
     {
-      "id": "2",
-      "id_docteur": 3,
-      "id_client": 5,
-      "date_rendezvous": "2024-12-06",
-      "heure_debut": "14:00",
-      "heure_fin": "14:30",
-      "statut": "En attente",
-      "motif": "Examen pédiatrique",
-      "date_creation": "2024-11-29T10:00:00Z"
-    },
-    {
-      "id": "3",
-      "id_docteur": 2,
-      "id_client": 1,
-      "date_rendezvous": "2024-12-07",
-      "heure_debut": "11:00",
-      "heure_fin": "11:30",
-      "statut": "Confirmé",
-      "motif": "Problème dermatologique",
-      "date_creation": "2024-11-25T12:00:00Z"
-    },
-    {
-      "id": "4",
-      "id_docteur": 4,
-      "id_client": 3,
-      "date_rendezvous": "2024-12-08",
-      "heure_debut": "16:30",
-      "heure_fin": "17:00",
-      "statut": "Annulé",
-      "motif": "Douleurs articulaires",
-      "date_creation": "2024-11-24T15:15:00Z"
-    },
-    {
-      "id": "5",
-      "id_docteur": 5,
-      "id_client": 4,
-      "date_rendezvous": "2024-12-09",
-      "heure_debut": "08:00",
-      "heure_fin": "08:30",
-      "statut": "Confirmé",
-      "motif": "Consultation gynécologique",
-      "date_creation": "2024-11-22T09:45:00Z"
-    },
-    {
-      "id": "6",
-      "id_docteur": 1,
-      "id_client": 6,
-      "date_rendezvous": "2024-12-10",
-      "heure_debut": "10:15",
-      "heure_fin": "10:45",
-      "statut": "En attente",
-      "motif": "Électrocardiogramme",
-      "date_creation": "2024-11-21T11:30:00Z"
-    },
-    {
-      "id": "7",
-      "id_docteur": 3,
-      "id_client": 7,
-      "date_rendezvous": "2024-12-11",
-      "heure_debut": "13:45",
-      "heure_fin": "14:15",
-      "statut": "Confirmé",
-      "motif": "Vaccination pour enfant",
-      "date_creation": "2024-11-20T08:00:00Z"
-    },
-    {
-      "id": "8",
-      "id_docteur": 2,
-      "id_client": 8,
-      "date_rendezvous": "2024-12-12",
-      "heure_debut": "17:00",
-      "heure_fin": "17:30",
-      "statut": "Confirmé",
-      "motif": "Allergies cutanées",
-      "date_creation": "2024-11-19T12:15:00Z"
-    },
-    {
-      "id": "9",
-      "id_docteur": 4,
-      "id_client": 9,
-      "date_rendezvous": "2024-12-13",
-      "heure_debut": "15:30",
-      "heure_fin": "16:00",
-      "statut": "En attente",
-      "motif": "Rééducation orthopédique",
-      "date_creation": "2024-11-18T09:45:00Z"
-    },
-    {
-      "id": "10",
-      "id_docteur": 5,
-      "id_client": 10,
-      "date_rendezvous": "2024-12-14",
-      "heure_debut": "08:30",
-      "heure_fin": "09:00",
-      "statut": "Confirmé",
-      "motif": "Consultation prénatale",
-      "date_creation": "2024-11-17T14:30:00Z"
+      "id": 2,
+      "idDocteur": 2,
+      "idClient": "1dc7",
+      "date": "2024-12-03T00:00:00Z",
+      "heureDebut": "2024-12-03T09:00:00Z",
+      "heureFin": "2024-12-03T09:30:00Z",
+      "status": "en attente",
+      "motif": "Douleur au dos",
+      "createdAt": "2024-11-29T12:30:00Z"
     }
   ]
 }

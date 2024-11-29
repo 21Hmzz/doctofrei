@@ -1,55 +1,63 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Client} from "../../database/types";
+import {User} from "../../database/types";
 import * as bcrypt from 'bcryptjs';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:3000/clients';
+    private apiUrl = 'http://localhost:3000/utilisateurs';
 
-  constructor(private http: HttpClient) {
-  }
+    constructor(private http: HttpClient) {
+    }
 
-  register(client: Client): Observable<any> {
-    return this.http.post(this.apiUrl, client);
-  }
-
-
-  login(email: string, password: string): void {
-    this.http.get<Client[]>(this.apiUrl).subscribe((clients) => {
-      const client = clients.find(c => c.email === email);
-
-      if (client && bcrypt.compareSync(password, client.password)) {
-        if (client.id) {
-          localStorage.setItem('token', client.id.toString());
-        } else {
-          console.error('Identifiants invalides');
-        }
-      } else {
-        console.error('Identifiants invalides');
-      }
-    });
-  }
+    register(user: User): Observable<any> {
+        return this.http.post(this.apiUrl, user);
+    }
 
 
-  logout()
-    :
-    void {
-    localStorage.removeItem('token');
-  }
+    login(email: string, password: string): void {
+        this.http.get<User[]>(this.apiUrl).subscribe((users) => {
+            const user = users.find(c => c.email === email);
 
-  getToken()
-    :
-    string | null {
-    return localStorage.getItem('token');
-  }
+            if (user && bcrypt.compareSync(password, user.password)) {
+                if (user.id && user.role) {
+                    localStorage.setItem('token', user.id.toString());
+                    localStorage.setItem('role', user.role);
+                } else {
+                    console.error('Identifiants invalides');
+                }
+            } else {
+                console.error('Identifiants invalides');
+            }
+        });
+    }
 
-  isAuthenticated()
-    :
-    boolean {
-    return !!this.getToken();
-  }
+
+    logout()
+        :
+        void {
+        localStorage.removeItem('token');
+        localStorage.removeItem('role');
+    }
+
+    getToken()
+        :
+        string | null {
+        return localStorage.getItem('token');
+    }
+
+    getRole()
+        :
+        string | null {
+        return localStorage.getItem('role');
+    }
+
+    isAuthenticated()
+        :
+        boolean {
+        return !!this.getToken();
+    }
 }
