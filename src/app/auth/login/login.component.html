@@ -1,0 +1,32 @@
+<div class="p-5 ">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"
+        class="mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-md p-5">
+    <div class="grid grid-cols-1 gap-5">
+      <div class="mb-5">
+        <label for="email">Email</label>
+        <input id="email" formControlName="email"
+               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+        <div *ngIf="f['email'].invalid && f['email'].touched">
+          <small *ngIf="f['email'].hasError('required')">Email is required</small>
+          <small *ngIf="f['email'].hasError('email')">Invalid email format</small>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <label for="password">Password</label>
+        <input id="password" formControlName="password" type="password"
+               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+        <div *ngIf="f['password'].invalid && f['password'].touched">
+          <small *ngIf="f['password'].hasError('required')">Password is required</small>
+          <small *ngIf="f['password'].hasError('minlength')">Password must be at least 6 characters long</small>
+        </div>
+      </div>
+    </div>
+
+    <button
+      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 disabled:opacity-50"
+      type="submit" [disabled]="loginForm.invalid">
+      Login
+    </button>
+  </form>
+</div>

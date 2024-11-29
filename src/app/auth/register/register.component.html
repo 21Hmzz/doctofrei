@@ -1,0 +1,103 @@
+<div class="p-5 ">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-md p-5">
+    <div class="grid grid-cols-2 gap-5">
+      <div class="mb-5">
+        <label for="nom">Nom</label>
+        <input id="nom" formControlName="nom"
+               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+        <div *ngIf="f['nom'].invalid && f['nom'].touched">
+          <small *ngIf="f['nom'].hasError('required')">Nom is required</small>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <label for="prenom">Prénom</label>
+        <input id="prenom" formControlName="prenom"
+               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+        <div *ngIf="f['prenom'].invalid && f['prenom'].touched">
+          <small *ngIf="f['prenom'].hasError('required')">Prénom is required</small>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <label for="email">Email</label>
+        <input id="email" formControlName="email"
+               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+        <div *ngIf="f['email'].invalid && f['email'].touched">
+          <small *ngIf="f['email'].hasError('required')">Email is required</small>
+          <small *ngIf="f['email'].hasError('email')">Invalid email format</small>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <label for="password">Password</label>
+        <input id="password" formControlName="password" type="password"
+               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+        <div *ngIf="f['password'].invalid && f['password'].touched">
+          <small *ngIf="f['password'].hasError('required')">Password is required</small>
+          <small *ngIf="f['password'].hasError('minlength')">Password must be at least 6 characters long</small>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <label for="confirmPassword">Confirm Password</label>
+        <input id="confirmPassword" formControlName="confirmPassword" type="password"
+               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+        <div *ngIf="f['confirmPassword'].invalid && f['confirmPassword'].touched">
+          <small *ngIf="f['confirmPassword'].hasError('required')">Confirmation is required</small>
+          <small *ngIf="f['confirmPassword'].hasError('mismatch')">Passwords do not match</small>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <label for="telephone">Telephone</label>
+        <input id="telephone" formControlName="telephone"
+               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+        <div *ngIf="f['telephone'].invalid && f['telephone'].touched">
+          <small *ngIf="f['telephone'].hasError('required')">Telephone is required</small>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <label for="dateNaissance">Date Naissance</label>
+        <input id="dateNaissance" formControlName="dateNaissance" type="date"
+               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+        <div *ngIf="f['dateNaissance'].invalid && f['dateNaissance'].touched">
+          <small *ngIf="f['dateNaissance'].hasError('required')">Date of birth is required</small>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <label for="adresse">Adresse</label>
+        <input id="adresse" formControlName="adresse"
+               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+        <div *ngIf="f['adresse'].invalid && f['adresse'].touched">
+          <small *ngIf="f['adresse'].hasError('required')">Adresse is required</small>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <label for="ville">Ville</label>
+        <input id="ville" formControlName="ville"
+               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+        <div *ngIf="f['ville'].invalid && f['ville'].touched">
+          <small *ngIf="f['ville'].hasError('required')">Ville is required</small>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <label for="codePostal">Code Postal</label>
+        <input id="codePostal" formControlName="codePostal"
+               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+        <div *ngIf="f['codePostal'].invalid && f['codePostal'].touched">
+          <small *ngIf="f['codePostal'].hasError('required')">Code Postal is required</small>
+        </div>
+      </div>
+    </div>
+
+    <button
+      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 disabled:opacity-50"
+      type="submit" [disabled]="registerForm.invalid">Register
+    </button>
+  </form>
+</div>
