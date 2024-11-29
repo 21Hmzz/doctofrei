@@ -1,7 +1,7 @@
 {
   "clients": [
     {
-      "id": 1,
+      "id": "1",
       "nom": "Dupont",
       "prenom": "Jean",
       "email": "jean.dupont@example.com",
@@ -14,7 +14,7 @@
       "date_creation": "2024-11-29T10:45:00Z"
     },
     {
-      "id": 2,
+      "id": "2",
       "nom": "Martin",
       "prenom": "Claire",
       "email": "claire.martin@example.com",
@@ -27,7 +27,7 @@
       "date_creation": "2024-11-28T09:30:00Z"
     },
     {
-      "id": 3,
+      "id": "3",
       "nom": "Nguyen",
       "prenom": "Léa",
       "email": "lea.nguyen@example.com",
@@ -40,7 +40,7 @@
       "date_creation": "2024-11-25T14:15:00Z"
     },
     {
-      "id": 4,
+      "id": "4",
       "nom": "Morel",
       "prenom": "Pierre",
       "email": "pierre.morel@example.com",
@@ -53,7 +53,7 @@
       "date_creation": "2024-11-20T17:00:00Z"
     },
     {
-      "id": 5,
+      "id": "5",
       "nom": "Bernard",
       "prenom": "Sophie",
       "email": "sophie.bernard@example.com",
@@ -66,7 +66,7 @@
       "date_creation": "2024-11-27T11:00:00Z"
     },
     {
-      "id": 6,
+      "id": "6",
       "nom": "Leclerc",
       "prenom": "Lucas",
       "email": "lucas.leclerc@example.com",
@@ -79,7 +79,7 @@
       "date_creation": "2024-11-22T15:45:00Z"
     },
     {
-      "id": 7,
+      "id": "7",
       "nom": "Rousseau",
       "prenom": "Emma",
       "email": "emma.rousseau@example.com",
@@ -92,7 +92,7 @@
       "date_creation": "2024-11-26T08:30:00Z"
     },
     {
-      "id": 8,
+      "id": "8",
       "nom": "Fontaine",
       "prenom": "Maxime",
       "email": "maxime.fontaine@example.com",
@@ -105,7 +105,7 @@
       "date_creation": "2024-11-21T12:00:00Z"
     },
     {
-      "id": 9,
+      "id": "9",
       "nom": "Durand",
       "prenom": "Camille",
       "email": "camille.durand@example.com",
@@ -118,7 +118,7 @@
       "date_creation": "2024-11-24T16:20:00Z"
     },
     {
-      "id": 10,
+      "id": "10",
       "nom": "Girard",
       "prenom": "Thomas",
       "email": "thomas.girard@example.com",
@@ -129,11 +129,25 @@
       "code_postal": "44000",
       "mot_de_passe": "$2b$10$abcdef123456abcdef123456abcdef123456abcdef123456abcdef12",
       "date_creation": "2024-11-23T14:10:00Z"
+    },
+    {
+      "id": "1dc7",
+      "nom": "Hamza",
+      "prenom": "Bella",
+      "email": "hamza.bella2107@gmail.com",
+      "password": "$2a$10$1qdijfAql2Jz//LRIvzCqOaLOr0fS.O7ZW5BYnGD2bj2PWkqWJ32m",
+      "confirmPassword": "hamzabella",
+      "telephone": "0652865074",
+      "dateNaissance": "2024-11-29",
+      "adresse": "5 avenue de verdun",
+      "ville": "Paray-vieille-poste",
+      "codePostal": "91550",
+      "createdAt": "2024-11-29T10:26:09.047Z"
     }
   ],
   "docteurs": [
     {
-      "id": 1,
+      "id": "1",
       "nom": "Moreau",
       "prenom": "Alice",
       "email": "alice.moreau@example.com",
@@ -146,7 +160,7 @@
       "date_creation": "2024-11-29T10:45:00Z"
     },
     {
-      "id": 2,
+      "id": "2",
       "nom": "Durand",
       "prenom": "Marc",
       "email": "marc.durand@example.com",
@@ -159,7 +173,7 @@
       "date_creation": "2024-11-28T09:30:00Z"
     },
     {
-      "id": 3,
+      "id": "3",
       "nom": "Lemoine",
       "prenom": "Sophie",
       "email": "sophie.lemoine@example.com",
@@ -172,7 +186,7 @@
       "date_creation": "2024-11-25T14:15:00Z"
     },
     {
-      "id": 4,
+      "id": "4",
       "nom": "Bernard",
       "prenom": "Thomas",
       "email": "thomas.bernard@example.com",
@@ -185,7 +199,7 @@
       "date_creation": "2024-11-20T17:00:00Z"
     },
     {
-      "id": 5,
+      "id": "5",
       "nom": "Martin",
       "prenom": "Claire",
       "email": "claire.martin@example.com",
@@ -200,7 +214,7 @@
   ],
   "rendezvous": [
     {
-      "id": 1,
+      "id": "1",
       "id_docteur": 1,
       "id_client": 2,
       "date_rendezvous": "2024-12-05",
@@ -211,7 +225,7 @@
       "date_creation": "2024-11-28T08:45:00Z"
     },
     {
-      "id": 2,
+      "id": "2",
       "id_docteur": 3,
       "id_client": 5,
       "date_rendezvous": "2024-12-06",
@@ -222,7 +236,7 @@
       "date_creation": "2024-11-29T10:00:00Z"
     },
     {
-      "id": 3,
+      "id": "3",
       "id_docteur": 2,
       "id_client": 1,
       "date_rendezvous": "2024-12-07",
@@ -233,7 +247,7 @@
       "date_creation": "2024-11-25T12:00:00Z"
     },
     {
-      "id": 4,
+      "id": "4",
       "id_docteur": 4,
       "id_client": 3,
       "date_rendezvous": "2024-12-08",
@@ -244,7 +258,7 @@
       "date_creation": "2024-11-24T15:15:00Z"
     },
     {
-      "id": 5,
+      "id": "5",
       "id_docteur": 5,
       "id_client": 4,
       "date_rendezvous": "2024-12-09",
@@ -255,7 +269,7 @@
       "date_creation": "2024-11-22T09:45:00Z"
     },
     {
-      "id": 6,
+      "id": "6",
       "id_docteur": 1,
       "id_client": 6,
       "date_rendezvous": "2024-12-10",
@@ -266,7 +280,7 @@
       "date_creation": "2024-11-21T11:30:00Z"
     },
     {
-      "id": 7,
+      "id": "7",
       "id_docteur": 3,
       "id_client": 7,
       "date_rendezvous": "2024-12-11",
@@ -277,7 +291,7 @@
       "date_creation": "2024-11-20T08:00:00Z"
     },
     {
-      "id": 8,
+      "id": "8",
       "id_docteur": 2,
       "id_client": 8,
       "date_rendezvous": "2024-12-12",
@@ -288,7 +302,7 @@
       "date_creation": "2024-11-19T12:15:00Z"
     },
     {
-      "id": 9,
+      "id": "9",
       "id_docteur": 4,
       "id_client": 9,
       "date_rendezvous": "2024-12-13",
@@ -299,7 +313,7 @@
       "date_creation": "2024-11-18T09:45:00Z"
     },
     {
-      "id": 10,
+      "id": "10",
       "id_docteur": 5,
       "id_client": 10,
       "date_rendezvous": "2024-12-14",
@@ -311,4 +325,3 @@
     }
   ]
 }
-

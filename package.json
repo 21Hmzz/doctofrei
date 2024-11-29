@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently \"ng serve\" \"npx json-server src/database/db.json --watch\"",
+    "start": "concurrently \"ng serve\" \"npx json-server src/database/db.json --watch \" ",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -18,6 +18,10 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
+    "@types/bcryptjs": "^2.4.6",
+    "assert": "^2.1.0",
+    "bcryptjs": "^2.4.3",
+    "buffer": "^6.0.3",
     "concurrently": "^9.1.0",
     "json-server": "^1.0.0-beta.3",
     "rxjs": "~7.8.0",
@@ -39,5 +43,8 @@
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15",
     "typescript": "~5.1.3"
+  },
+  "browser": {
+    "crypto": false
   }
 }
