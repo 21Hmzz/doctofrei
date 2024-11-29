@@ -14,7 +14,7 @@ interface Docteur {
 }
 
 interface Client {
-  id: number;
+  id?: number;
   nom: string;
   prenom: string;
   email: string;
