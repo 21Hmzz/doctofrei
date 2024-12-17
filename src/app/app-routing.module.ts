@@ -5,7 +5,10 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import {RegisterComponent} from './auth/register/register.component';
 import {LoginComponent} from './auth/login/login.component';
-import { AboutComponent } from './about/about.component';
+import {DashboardComponent} from "./dashboard/dashboard.component";
+import {DashboardComponent as ProDashboardComponent} from "./pro/dashboard/dashboard.component";
+import {AuthGuard} from "./auth/auth.guard";
+import {LogoutComponent} from "./auth/logout.component";
 
 const routes: Routes = [
   {
@@ -27,7 +30,10 @@ const routes: Routes = [
   {
     path:'about',
     component: AboutComponent
-  }
+  },
+  {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
+  {path: 'pro/dashboard', component: ProDashboardComponent, canActivate: [AuthGuard]},
+  {path: 'logout', component: LogoutComponent},
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
