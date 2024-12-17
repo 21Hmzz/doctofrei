@@ -17,14 +17,13 @@ export class AuthService {
     }
 
     register(user: User): Observable<any> {
-        return this.http.post(this.apiUrl, user);
+        return this.http.post(this.apiUrl + 'utilisateurs', user);
     }
 
 
     login(email: string, password: string): void {
         this.http.get<User[]>(this.apiUrl + 'utilisateurs').subscribe((users) => {
             const user = users.find(c => c.email === email);
-
             if (user && bcrypt.compareSync(password, user.password)) {
                 if (user.id && user.role) {
                     localStorage.setItem('token', user.id.toString());

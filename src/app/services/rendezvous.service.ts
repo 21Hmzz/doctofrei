@@ -12,7 +12,7 @@ export class RendezVousService {
 
   constructor(private http: HttpClient) { }
 
-  getRendezVousByClientId(clientId: string): Observable<RendezVous[]> {
+ getRendezVousByClientId(clientId: string): Observable<RendezVous[]> {
     return this.http.get<RendezVous[]>(`${this.apiUrl}?idClient=${clientId}`);
   }
-}
+} 

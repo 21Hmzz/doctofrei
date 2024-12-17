@@ -14,6 +14,8 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { DashboardComponent as ProDashboardComponent  } from './pro/dashboard/dashboard.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SpecialitesComponent } from './specialites/specialites.component';
+import { FirstLetterColorPipe } from './first-letter-color.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ContactComponent,
     AboutComponent,
     ProDashboardComponent,
-    DashboardComponent
+    DashboardComponent,
+    SpecialitesComponent,
+    FirstLetterColorPipe
   ],
   imports: [
     BrowserModule,

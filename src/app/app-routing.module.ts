@@ -9,6 +9,8 @@ import {DashboardComponent} from "./dashboard/dashboard.component";
 import {DashboardComponent as ProDashboardComponent} from "./pro/dashboard/dashboard.component";
 import {AuthGuard} from "./auth/auth.guard";
 import {LogoutComponent} from "./auth/logout.component";
+import { AboutComponent } from './about/about.component';
+import { SpecialitesComponent } from './specialites/specialites.component';
 
 const routes: Routes = [
   {
@@ -31,9 +33,24 @@ const routes: Routes = [
     path:'about',
     component: AboutComponent
   },
-  {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
-  {path: 'pro/dashboard', component: ProDashboardComponent, canActivate: [AuthGuard]},
-  {path: 'logout', component: LogoutComponent},
+  {
+    path: 'dashboard', 
+    component: DashboardComponent,
+     canActivate: [AuthGuard]
+  },
+  {
+    path: 'pro/dashboard', 
+    component: ProDashboardComponent, 
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'logout', 
+    component: LogoutComponent
+  },
+  {
+    path: 'specs',
+    component: SpecialitesComponent
+  }
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
