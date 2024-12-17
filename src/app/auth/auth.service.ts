@@ -1,55 +1,107 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
-import {Client} from "../../database/types";
+import {BehaviorSubject, forkJoin, map, Observable} from 'rxjs';
+import {Docteur, User} from "../../database/types";
 import * as bcrypt from 'bcryptjs';
+import {Router} from "@angular/router";
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:3000/clients';
+    private apiUrl = 'http://localhost:3000/';
+    private isAuthenticatedSubject = new BehaviorSubject<boolean>(this.isAuthenticated());
+    public isAuthenticated$ = this.isAuthenticatedSubject.asObservable();
 
-  constructor(private http: HttpClient) {
-  }
+    constructor(private http: HttpClient, private router: Router) {
+    }
 
-  register(client: Client): Observable<any> {
-    return this.http.post(this.apiUrl, client);
-  }
+    register(user: User): Observable<any> {
+        return this.http.post(this.apiUrl, user);
+    }
 
 
-  login(email: string, password: string): void {
-    this.http.get<Client[]>(this.apiUrl).subscribe((clients) => {
-      const client = clients.find(c => c.email === email);
+    login(email: string, password: string): void {
+        this.http.get<User[]>(this.apiUrl + 'utilisateurs').subscribe((users) => {
+            const user = users.find(c => c.email === email);
 
-      if (client && bcrypt.compareSync(password, client.password)) {
-        if (client.id) {
-          localStorage.setItem('token', client.id.toString());
-        } else {
-          console.error('Identifiants invalides');
+            if (user && bcrypt.compareSync(password, user.password)) {
+                if (user.id && user.role) {
+                    localStorage.setItem('token', user.id.toString());
+                    localStorage.setItem('role', user.role);
+                    this.isAuthenticatedSubject.next(true);
+                    this.router.navigate(['/dashboard']).then();
+                } else {
+                    console.error('Identifiants invalides');
+                }
+            } else {
+                console.error('Identifiants invalides');
+            }
+        });
+    }
+
+
+    logout()
+        :
+        void {
+        localStorage.removeItem('token');
+        localStorage.removeItem('role');
+        this.isAuthenticatedSubject.next(false);
+    }
+
+    getToken()
+        :
+        string | null {
+        return localStorage.getItem('token');
+    }
+
+    getRole()
+        :
+        string | null {
+        return localStorage.getItem('role');
+    }
+
+    isAuthenticated()
+        :
+        boolean {
+        return !!this.getToken();
+    }
+
+    getUserInfo(): Observable<User | null> {
+        const token = this.getToken();
+        const role = this.getRole();
+        let apiUrl = this.apiUrl;
+
+
+        if (!token || !role) {
+            return new Observable(subscriber => {
+                subscriber.next(null);
+                subscriber.complete();
+            });
         }
-      } else {
-        console.error('Identifiants invalides');
-      }
-    });
-  }
+
+        const userRequest = this.http.get<User[]>(`${apiUrl}utilisateurs`).pipe(
+            map(users => users.find(c => c.id === token) || null)
+        );
 
 
-  logout()
-    :
-    void {
-    localStorage.removeItem('token');
-  }
 
-  getToken()
-    :
-    string | null {
-    return localStorage.getItem('token');
-  }
+        if (role === 'docteur') {
+            const doctorRequest = this.http.get<Docteur[]>(`${apiUrl}docteurs`).pipe(
+                map(docteurs => docteurs.find(d => d.id_utilisateur === token) || null)
+            );
 
-  isAuthenticated()
-    :
-    boolean {
-    return !!this.getToken();
-  }
+            return forkJoin([userRequest, doctorRequest]).pipe(
+                map(([user, doctor]: [User | null, Docteur | null]) => {
+                    if (user) {
+                        user.doctor = doctor;
+                        return user;
+                    }
+                    return null;
+                })
+            );
+        } else {
+            return userRequest;
+        }
+    }
 }
