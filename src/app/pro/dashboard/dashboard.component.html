@@ -1,0 +1,39 @@
+<div class="p-4 flex flex-col gap-2">
+  <div class="grid grid-cols-4 grid-rows-1 gap-2">
+    <div class="border border-dashed border-gray-300 p-4 rounded-lg col-span-4 bg-white">
+      <p>
+        <span class="text-lg font-bold">Bienvenue, {{ user?.nom }} {{ user?.prenom }}</span>
+      </p>
+      <p>
+        <span class="text-sm text-gray-500">
+          Vous êtes connecté sur votre espace docteur.
+        </span>
+      </p>
+    </div>
+    <div class="border border-dashed border-gray-300 p-4 rounded-lg min-h-48 bg-white col-span-2 ">
+      <div class="flex justify-between items-center">
+        <p class="text-lg font-bold">
+          {{ user?.nom }} {{ user?.prenom }}
+        </p>
+        <span class="rounded-md bg-gray-200 text-gray-500 text-xs px-2 py-1">
+          {{ user?.role === 'docteur' ? 'Docteur' : 'Utilisateur' }}
+        </span>
+      </div>
+      <span class="text-sm text-gray-500">
+        {{ user?.email }}
+      </span>
+      <a href="#" class="bg-blue-600 text-white px-2 py-2 rounded-md text-sm mt-2 inline-block w-full text-center">
+        Modifier
+      </a>
+    </div>
+    <div class="border border-dashed border-gray-300 p-4 rounded-lg min-h-48 bg-white"></div>
+    <div class="border border-dashed border-gray-300 p-4 rounded-lg min-h-48 bg-white"></div>
+  </div>
+  <div class="grid grid-cols-1 grid-rows-1 gap-2">
+    <div class="border border-dashed border-gray-300 p-4 rounded-lg min-h-48 bg-white"></div>
+  </div>
+  <div class="grid grid-cols-2 grid-rows-1 gap-2">
+    <div class="border border-dashed border-gray-300 p-4 rounded-lg min-h-48 bg-white"></div>
+    <div class="border border-dashed border-gray-300 p-4 rounded-lg min-h-48 bg-white"></div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 interface User {
-    id?: number;
+    id?: string;
     nom: string;
     prenom: string;
     email: string;
@@ -8,9 +8,11 @@ interface User {
     password: string;
     createdAt: Date;
     updatedAt: Date;
+    doctor?: Docteur | null;
 }
 
 interface Docteur extends User {
+    id_utilisateur: string;
     specialites: number[];
     adresse: string;
     ville: string;
@@ -18,6 +20,7 @@ interface Docteur extends User {
 }
 
 interface Client extends User {
+    id_utilisateur: string;
     dateNaissance: Date;
     adresse: string;
     ville: string;
@@ -25,7 +28,7 @@ interface Client extends User {
 }
 
 interface RendezVous {
-    id?: number;
+    id?: string;
     idDocteur: number;
     idClient: number;
     date: Date;

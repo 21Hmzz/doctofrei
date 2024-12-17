@@ -41,7 +41,7 @@
       "nom": "Alice",
       "prenom": "Moreau",
       "email": "alice.moreau@example.com",
-      "password": "$2b$10$abcdef123456abcdef123456abcdef123456abcdef123456abcdef12",
+      "password": "$2a$10$1qdijfAql2Jz//LRIvzCqOaLOr0fS.O7ZW5BYnGD2bj2PWkqWJ32m",
       "telephone": "0612345678",
       "role": "docteur",
       "createdAt": "2024-11-29T10:45:00Z"

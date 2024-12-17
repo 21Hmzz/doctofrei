@@ -9,13 +9,17 @@ import {HttpClientModule} from "@angular/common/http";
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { DashboardComponent as ProDashboardComponent  } from './pro/dashboard/dashboard.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ProDashboardComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
