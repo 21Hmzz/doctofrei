@@ -38,5 +38,10 @@ interface RendezVous {
     motif: string;
     createdAt: Date;
 }
+interface Specialite {
+    id?: string;
+    nom: string;
+    image: string;
+}
 
-export {User, Docteur, Client, RendezVous}
+export {User, Docteur, Client, RendezVous, Specialite}

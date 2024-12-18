@@ -9,17 +9,26 @@ import {HttpClientModule} from "@angular/common/http";
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
 import { DashboardComponent as ProDashboardComponent  } from './pro/dashboard/dashboard.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { SpecialitesComponent } from './specialites/specialites.component';
+import { FirstLetterColorPipe } from './first-letter-color.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    HomeComponent,
+    ContactComponent,
+    AboutComponent,
     ProDashboardComponent,
-    DashboardComponent
+    DashboardComponent,
+    SpecialitesComponent,
+    FirstLetterColorPipe
   ],
   imports: [
     BrowserModule,

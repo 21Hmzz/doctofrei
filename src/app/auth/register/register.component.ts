@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators} from '@angular/forms';
 import {AuthService} from '../auth.service';
 import * as bcrypt from 'bcryptjs';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,7 @@ import * as bcrypt from 'bcryptjs';
 export class RegisterComponent implements OnInit {
   registerForm!: FormGroup;
 
-  constructor(private fb: FormBuilder, private authService: AuthService) {
+  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -71,14 +72,16 @@ export class RegisterComponent implements OnInit {
       return;
     }
 
-    let newClient = this.registerForm.value;
+    let { confirmPassword, ...newClient } = this.registerForm.value;
 
     newClient.createdAt = new Date();
     newClient.password = bcrypt.hashSync(newClient.password, 10);
+    newClient.role = "client" // not sure
 
     this.authService.register(newClient).subscribe({
       next: (response) => {
         console.log('User registered successfully', response);
+        this.router.navigate(['/login']);
       },
       error: (err) => {
         console.error('Registration failed', err);
