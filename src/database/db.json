@@ -49,7 +49,9 @@
       "password": "$2a$10$1qdijfAql2Jz//LRIvzCqOaLOr0fS.O7ZW5BYnGD2bj2PWkqWJ32m",
       "telephone": "0612345678",
       "role": "docteur",
-      "createdAt": "2024-11-29T10:45:00Z"
+      "createdAt": "2024-11-29T10:45:00Z",
+      "adresse": "5 avenue de verdun",
+      "ville": "Paray-vieille-poste"
     },
     {
       "id": "fa30",
@@ -87,7 +89,7 @@
       "date": "2024-12-01T00:00:00Z",
       "heureDebut": "2024-12-01T10:00:00Z",
       "heureFin": "2024-12-01T10:30:00Z",
-      "status": "confirmé",
+      "status": "annulé",
       "motif": "Consultation de routine",
       "createdAt": "2024-11-29T12:00:00Z"
     },
@@ -98,7 +100,7 @@
       "date": "2024-12-03T00:00:00Z",
       "heureDebut": "2024-12-03T09:00:00Z",
       "heureFin": "2024-12-03T09:30:00Z",
-      "status": "en attente",
+      "status": "annulé",
       "motif": "Douleur au dos",
       "createdAt": "2024-11-29T12:30:00Z"
     }
