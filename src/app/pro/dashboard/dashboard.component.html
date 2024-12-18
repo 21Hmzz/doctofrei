@@ -1,8 +1,10 @@
 <div class="p-4 flex flex-col gap-2">
   <div class="grid grid-cols-4 grid-rows-1 gap-2">
-    <div class="border border-dashed border-gray-300 p-4 rounded-lg col-span-4 bg-white">
+    <div class="border border-gray-300 p-4 rounded-lg col-span-4 bg-white">
       <p>
-        <span class="text-lg font-bold">Bienvenue, {{ user?.nom }} {{ user?.prenom }}</span>
+        <span class="text-lg font-bold"
+          >Bienvenue, {{ user?.nom }} {{ user?.prenom }}</span
+        >
       </p>
       <p>
         <span class="text-sm text-gray-500">
@@ -10,30 +12,106 @@
         </span>
       </p>
     </div>
-    <div class="border border-dashed border-gray-300 p-4 rounded-lg min-h-48 bg-white col-span-2 ">
+    <div
+      class="border border-gray-300 p-4 rounded-lg min-h-48 bg-white col-span-2"
+    >
       <div class="flex justify-between items-center">
-        <p class="text-lg font-bold">
-          {{ user?.nom }} {{ user?.prenom }}
-        </p>
+        <p class="text-lg font-bold">{{ user?.nom }} {{ user?.prenom }}</p>
         <span class="rounded-md bg-gray-200 text-gray-500 text-xs px-2 py-1">
-          {{ user?.role === 'docteur' ? 'Docteur' : 'Utilisateur' }}
+          {{ user?.role === "docteur" ? "Docteur" : "Utilisateur" }}
         </span>
       </div>
       <span class="text-sm text-gray-500">
         {{ user?.email }}
       </span>
-      <a href="#" class="bg-blue-600 text-white px-2 py-2 rounded-md text-sm mt-2 inline-block w-full text-center">
-        Modifier
+
+      <a
+        routerLink="/edit-doctor-profile"
+        class="bg-blue-600 text-white px-2 py-2 rounded-md text-sm mt-2 inline-block w-full text-center"
+      >
+        Modifier Profil Docteur
       </a>
     </div>
-    <div class="border border-dashed border-gray-300 p-4 rounded-lg min-h-48 bg-white"></div>
-    <div class="border border-dashed border-gray-300 p-4 rounded-lg min-h-48 bg-white"></div>
+    <div class="border border-gray-300 p-4 rounded-lg min-h-48 bg-white">
+      <h1 class="text-lg font-bold">Les ordonnances</h1>
+      <div class="flex justify-between items-center mt-2">
+        <p class="text-sm font-bold">Ordonnance 1</p>
+        <span class="rounded-md bg-gray-200 text-gray-500 text-xs px-2 py-1"
+          >En attente</span
+        >
+      </div>
+      <span class="text-sm text-gray-500">Date: 12/12/2021</span>
+    </div>
+    <div class="border border-gray-300 p-4 rounded-lg min-h-48 bg-white">
+      <h1 class="text-lg font-bold">Les patients</h1>
+      <div class="flex justify-between items-center mt-2">
+        <p class="text-sm font-bold">Patient 1</p>
+        <span class="rounded-md bg-gray-200 text-gray-500 text-xs px-2 py-1"
+          >En attente</span
+        >
+      </div>
+      <span class="text-sm text-gray-500">Date: 12/12/2021</span>
+    </div>
   </div>
   <div class="grid grid-cols-1 grid-rows-1 gap-2">
-    <div class="border border-dashed border-gray-300 p-4 rounded-lg min-h-48 bg-white"></div>
-  </div>
-  <div class="grid grid-cols-2 grid-rows-1 gap-2">
-    <div class="border border-dashed border-gray-300 p-4 rounded-lg min-h-48 bg-white"></div>
-    <div class="border border-dashed border-gray-300 p-4 rounded-lg min-h-48 bg-white"></div>
+    <div class="border border-gray-300 p-6 rounded-lg bg-white shadow-md">
+      <div class="flex justify-between items-center">
+        <p class="text-xl font-semibold text-gray-800">Vos rendez-vous</p>
+        <span class="rounded-md bg-blue-500 text-white text-xs px-2 py-1">
+          {{ doctorRendezVous.length }}
+        </span>
+      </div>
+      <div class="mt-6 space-y-4">
+        <div
+          class="flex justify-between items-center p-4 bg-gray-50 rounded-lg shadow-sm"
+          *ngFor="let rdv of doctorRendezVous"
+        >
+          <div>
+            <p class="text-md font-medium text-gray-700">
+              {{ rdv?.user?.nom }} {{ rdv?.user?.prenom }}
+            </p>
+            <p class="text-sm text-gray-500">{{ rdv.motif }}</p>
+          </div>
+          <div class="text-right">
+            <span
+              class="block rounded-md text-xs px-2 py-1 mb-1 text-center text-white"
+              [ngClass]="{
+                'bg-green-500': rdv.status === 'confirmé',
+                'bg-red-500': rdv.status === 'annulé',
+                'bg-yellow-500': rdv.status === 'en attente'
+              }"
+            >
+              {{ rdv.status }}
+            </span>
+            <span class="block text-xs text-gray-500">
+              {{ rdv.date | date : "dd/MM/yyyy" }} -
+              {{ rdv.heureDebut | date : "HH:mm" }}
+            </span>
+            <div *ngIf="rdv.status === 'en attente'">
+              <button
+                class="bg-green-500 text-white px-2 py-1 rounded-md text-xs"
+                (click)="confirmRendezVous(rdv.id ?? '')"
+              >
+                Confirmer
+              </button>
+              <button
+                class="bg-red-500 text-white px-2 py-1 rounded-md text-xs ml-2"
+                (click)="cancelRendezVous(rdv.id ?? '')"
+              >
+                Annuler
+              </button>
+            </div>
+            <div *ngIf="rdv.status === 'confirmé'">
+              <button
+                class="bg-red-500 text-white px-2 py-1 rounded-md text-xs"
+                (click)="cancelRendezVous(rdv.id ?? '')"
+              >
+                Annuler
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
