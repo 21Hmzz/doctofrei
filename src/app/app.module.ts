@@ -15,7 +15,7 @@ import { AboutComponent } from './about/about.component';
 import { DashboardComponent as ProDashboardComponent  } from './pro/dashboard/dashboard.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SpecialitesComponent } from './specialites/specialites.component';
-import { FirstLetterColorPipe } from './first-letter-color.pipe';
+import { AddressFormatterPipe } from './address-formater-pipe';
 import { PageDocteursComponent } from './page-docteurs/page-docteurs.component';
 
 @NgModule({
@@ -29,7 +29,7 @@ import { PageDocteursComponent } from './page-docteurs/page-docteurs.component';
     ProDashboardComponent,
     DashboardComponent,
     SpecialitesComponent,
-    FirstLetterColorPipe,
+    AddressFormatterPipe,
     PageDocteursComponent
   ],
   imports: [

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DocteurComplet } from 'src/database/types';
 import { SearchService } from '../services/search.service';
+import { AddressFormatterPipe } from '../address-formater-pipe';
 
 @Component({
   selector: 'app-page-docteurs',
