@@ -16,6 +16,7 @@ import { DashboardComponent as ProDashboardComponent  } from './pro/dashboard/da
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SpecialitesComponent } from './specialites/specialites.component';
 import { FirstLetterColorPipe } from './first-letter-color.pipe';
+import { PageDocteursComponent } from './page-docteurs/page-docteurs.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FirstLetterColorPipe } from './first-letter-color.pipe';
     ProDashboardComponent,
     DashboardComponent,
     SpecialitesComponent,
-    FirstLetterColorPipe
+    FirstLetterColorPipe,
+    PageDocteursComponent
   ],
   imports: [
     BrowserModule,

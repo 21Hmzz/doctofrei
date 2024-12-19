@@ -39,9 +39,17 @@ interface RendezVous {
     createdAt: Date;
 }
 interface Specialite {
-    id?: string;
+    id?: number;
     nom: string;
     image: string;
 }
+interface DocteurComplet {
+    id: string;
+    utilisateur: User;
+    specialites: Specialite[];
+    adresse_cabinet: string;
+    ville: string;
+    photo: string;
+  }  
 
-export {User, Docteur, Client, RendezVous, Specialite}
+export {User, Docteur, Client, RendezVous, Specialite, DocteurComplet}

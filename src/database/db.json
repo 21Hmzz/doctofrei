@@ -64,6 +64,34 @@
       "codePostal": "75016",
       "createdAt": "2024-12-17T14:38:27.140Z",
       "role": "client"
+    },
+    {
+      "id": "4",
+      "nom": "Dupont",
+      "prenom": "David",
+      "email": "david.dupont@gmail.com",
+      "password": "$2a$10$.mm4J526ykv1n8vTDLN0DeCQ56noWltZZR73TWYcU2FTacD7jNHn2",
+      "telephone": "07432456665",
+      "dateNaissance": "1996-06-05",
+      "adresse": "",
+      "ville": "",
+      "codePostal": "",
+      "createdAt": "2024-12-17T14:38:27.140Z",
+      "role": "docteur"
+    },
+    {
+      "id": "5",
+      "nom": "Traoré",
+      "prenom": "Farid",
+      "email": "farid.traore@gmail.com",
+      "password": "$2a$10$.mm4J526ykv1n8vTDLN0DeCQ56noWltZZR73TWYcU2FTacD7jNHn2",
+      "telephone": "06465764664",
+      "dateNaissance": "1996-06-05",
+      "adresse": "",
+      "ville": "",
+      "codePostal": "",
+      "createdAt": "2024-12-17T14:38:27.140Z",
+      "role": "docteur"
     }
   ],
   "docteurs": [
@@ -77,6 +105,28 @@
       "ville": "Paris",
       "code_postal": "75005",
       "id": "4c2e"
+    },
+    {
+      "id_utilisateur": 4,
+      "specialites": [
+        2,
+        3
+      ],
+      "adresse_cabinet": "17 avenue de la liberte",
+      "ville": "Paris",
+      "code_postal": "75016",
+      "id": "4dfe"
+    },
+    {
+      "id_utilisateur": 5,
+      "specialites": [
+        2,
+        5
+      ],
+      "adresse_cabinet": "15 Rue de la Santé",
+      "ville": "Paris",
+      "code_postal": "75005",
+      "id": "4d3e"
     }
   ],
   "rendezvous": [

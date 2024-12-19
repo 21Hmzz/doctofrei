@@ -11,6 +11,7 @@ import {AuthGuard} from "./auth/auth.guard";
 import {LogoutComponent} from "./auth/logout.component";
 import { AboutComponent } from './about/about.component';
 import { SpecialitesComponent } from './specialites/specialites.component';
+import { PageDocteursComponent } from './page-docteurs/page-docteurs.component';
 
 const routes: Routes = [
   {
@@ -50,6 +51,10 @@ const routes: Routes = [
   {
     path: 'specs',
     component: SpecialitesComponent
+  },
+  {
+    path: 'page-doctors',
+    component: PageDocteursComponent
   }
 ]
 @NgModule({
