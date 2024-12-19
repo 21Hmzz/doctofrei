@@ -15,9 +15,10 @@ import { AboutComponent } from './about/about.component';
 import { DashboardComponent as ProDashboardComponent } from './pro/dashboard/dashboard.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SpecialitesComponent } from './specialites/specialites.component';
-import { FirstLetterColorPipe } from './first-letter-color.pipe';
+import { AddressFormatterPipe } from './address-formater-pipe';
 import { DoctorProfileEditComponent } from './doctor-profile-edit/doctor-profile-edit.component';
 import { PatientProfileEditComponent } from './patient-profile-edit/patient-profile-edit.component';
+import { PageDocteursComponent } from './page-docteurs/page-docteurs.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { PatientProfileEditComponent } from './patient-profile-edit/patient-prof
     ProDashboardComponent,
     DashboardComponent,
     SpecialitesComponent,
-    FirstLetterColorPipe,
+    AddressFormatterPipe,
+    PageDocteursComponent,
     DoctorProfileEditComponent,
     PatientProfileEditComponent,
   ],

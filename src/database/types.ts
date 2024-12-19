@@ -43,13 +43,21 @@ interface RendezVous {
   createdAt: Date;
 }
 interface Specialite {
-  id?: string;
-  nom: string;
-  image: string;
+    id?: number;
+    nom: string;
+    image: string;
 }
+interface DocteurComplet {
+    id: string;
+    utilisateur: User;
+    specialites: Specialite[];
+    adresse_cabinet: string;
+    ville: string;
+    photo: string;
+  }  
 
 interface RDVWithUser extends RendezVous {
   user: User;
 }
 
-export { User, Docteur, Client, RendezVous, Specialite, RDVWithUser };
+export { User, Docteur, Client, RendezVous, Specialite, DocteurComplet, RDVWithUser };
