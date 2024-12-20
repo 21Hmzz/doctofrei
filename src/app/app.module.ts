@@ -19,6 +19,7 @@ import { AddressFormatterPipe } from './address-formater-pipe';
 import { DoctorProfileEditComponent } from './doctor-profile-edit/doctor-profile-edit.component';
 import { PatientProfileEditComponent } from './patient-profile-edit/patient-profile-edit.component';
 import { PageDocteursComponent } from './page-docteurs/page-docteurs.component';
+import { DoctorsBySpecialtyComponent } from './doctors-by-specialty/doctors-by-specialty.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { PageDocteursComponent } from './page-docteurs/page-docteurs.component';
     PageDocteursComponent,
     DoctorProfileEditComponent,
     PatientProfileEditComponent,
+    DoctorsBySpecialtyComponent,
   ],
   imports: [
     BrowserModule,

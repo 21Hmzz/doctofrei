@@ -55,8 +55,8 @@
     },
     {
       "id": "fa30",
-      "nom": "maman",
-      "prenom": "farid",
+      "nom": "Maman",
+      "prenom": "Farid",
       "email": "farid.maman@gmail.com",
       "password": "$2a$10$.mm4J526ykv1n8vTDLN0DeCQ56noWltZZR73TWYcU2FTacD7jNHn2",
       "telephone": "06465334664",
@@ -94,7 +94,175 @@
       "codePostal": "",
       "createdAt": "2024-12-17T14:38:27.140Z",
       "role": "docteur"
+    },
+    {
+      "id": "6",
+      "nom": "Martin",
+      "prenom": "Paul",
+      "email": "paul.martin@gmail.com",
+      "password": "$2a$10$randomPassword",
+      "telephone": "0622334455",
+      "role": "docteur",
+      "createdAt": "2024-12-19T10:00:00Z",
+      "adresse": "3 Rue de la Paix",
+      "ville": "Paris",
+      "codePostal": "75008"
+    },
+    {
+      "id": "d79a",
+      "nom": "GENE",
+      "prenom": "Djahnick",
+      "email": "embaucher_mortiers.5t@icloud.com",
+      "password": "$2a$10$kX5qEvx3fMRVMFzVOV9XnuK/ehRbeAT0Zx8EMaUikdv/8ALxregfu",
+      "telephone": "0766704132",
+      "dateNaissance": "2024-12-13",
+      "adresse": "26 Rue Lafontaine",
+      "ville": "Antony",
+      "codePostal": "92160",
+      "createdAt": "2024-12-19T17:49:03.857Z",
+      "role": "client"
+    },
+    {
+      "id": "7",
+      "nom": "Durand",
+      "prenom": "Sophie",
+      "email": "sophie.durand@example.com",
+      "password": "$2a$10$randomPassword",
+      "telephone": "0611223344",
+      "dateNaissance": "1990-05-10",
+      "adresse": "10 Rue des Fleurs",
+      "ville": "Paris",
+      "codePostal": "75010",
+      "role": "docteur",
+      "createdAt": "2024-12-20T09:00:00Z"
+    },
+    {
+      "id": "8",
+      "nom": "Lefebvre",
+      "prenom": "Jean",
+      "email": "jean.lefebvre@example.com",
+      "password": "$2a$10$randomPassword",
+      "telephone": "0600112233",
+      "dateNaissance": "1982-09-22",
+      "adresse": "22 Avenue Montaigne",
+      "ville": "Paris",
+      "codePostal": "75008",
+      "role": "docteur",
+      "createdAt": "2024-12-20T09:05:00Z"
+    },
+    {
+      "id": "9",
+      "nom": "Morel",
+      "prenom": "Hélène",
+      "email": "helene.morel@example.com",
+      "password": "$2a$10$randomPassword",
+      "telephone": "0677889900",
+      "dateNaissance": "1985-11-15",
+      "adresse": "34 Boulevard Saint-Germain",
+      "ville": "Paris",
+      "codePostal": "75005",
+      "role": "docteur",
+      "createdAt": "2024-12-20T09:10:00Z"
+    },
+    {
+      "id": "10",
+      "nom": "Bernard",
+      "prenom": "Luc",
+      "email": "luc.bernard@example.com",
+      "password": "$2a$10$randomPassword",
+      "telephone": "0622113344",
+      "dateNaissance": "1978-03-29",
+      "adresse": "5 Place de la République",
+      "ville": "Paris",
+      "codePostal": "75011",
+      "role": "docteur",
+      "createdAt": "2024-12-20T09:15:00Z"
+    },
+    {
+      "id": "11",
+      "nom": "Petit",
+      "prenom": "Emilie",
+      "email": "emilie.petit@example.com",
+      "password": "$2a$10$randomPassword",
+      "telephone": "0612340099",
+      "dateNaissance": "1992-07-07",
+      "adresse": "12 Rue du Faubourg",
+      "ville": "Paris",
+      "codePostal": "75009",
+      "role": "docteur",
+      "createdAt": "2024-12-20T09:20:00Z"
+    },
+    {
+      "id": "12",
+      "nom": "Roux",
+      "prenom": "Nicolas",
+      "email": "nicolas.roux@example.com",
+      "password": "$2a$10$randomPassword",
+      "telephone": "0600556677",
+      "dateNaissance": "1980-01-10",
+      "adresse": "8 Rue de la Convention",
+      "ville": "Paris",
+      "codePostal": "75015",
+      "role": "docteur",
+      "createdAt": "2024-12-20T09:25:00Z"
+    },
+    {
+      "id": "13",
+      "nom": "Fournier",
+      "prenom": "Marie",
+      "email": "marie.fournier@example.com",
+      "password": "$2a$10$randomPassword",
+      "telephone": "0633445566",
+      "dateNaissance": "1988-12-30",
+      "adresse": "45 Rue Montmartre",
+      "ville": "Paris",
+      "codePostal": "75002",
+      "role": "docteur",
+      "createdAt": "2024-12-20T09:30:00Z"
+    },
+    {
+      "id": "14",
+      "nom": "Girard",
+      "prenom": "Thomas",
+      "email": "thomas.girard@example.com",
+      "password": "$2a$10$randomPassword",
+      "telephone": "0655443322",
+      "dateNaissance": "1995-04-17",
+      "adresse": "20 Rue de Lille",
+      "ville": "Paris",
+      "codePostal": "75007",
+      "role": "docteur",
+      "createdAt": "2024-12-20T09:35:00Z"
+    },
+    {
+      "id": "15",
+      "nom": "Chevalier",
+      "prenom": "Anna",
+      "email": "anna.chevalier@example.com",
+      "password": "$2a$10$randomPassword",
+      "telephone": "0688997766",
+      "dateNaissance": "1991-08-05",
+      "adresse": "6 Rue du Bac",
+      "ville": "Paris",
+      "codePostal": "75007",
+      "role": "docteur",
+      "createdAt": "2024-12-20T09:40:00Z"
+    },
+    {
+      "id": "16",
+      "nom": "Lambert",
+      "prenom": "Pierre",
+      "email": "pierre.lambert@example.com",
+      "password": "$2a$10$randomPassword",
+      "telephone": "0699776655",
+      "dateNaissance": "1983-10-23",
+      "adresse": "2 Rue Oberkampf",
+      "ville": "Paris",
+      "codePostal": "75011",
+      "role": "docteur",
+      "createdAt": "2024-12-20T09:45:00Z"
     }
+
   ],
   "docteurs": [
     {
@@ -114,7 +282,7 @@
         2,
         3
       ],
-      "adresse_cabinet": "17 avenue de la liberte",
+      "adresse_cabinet": "17 avenue de la liberté",
       "ville": "Paris",
       "code_postal": "75016",
       "id": "4dfe"
@@ -129,7 +297,98 @@
       "ville": "Paris",
       "code_postal": "75005",
       "id": "4d3e"
+    },
+    {
+      "id_utilisateur": 6,
+      "specialites": [
+        4,
+        5
+      ],
+      "adresse_cabinet": "3 Rue de la Paix",
+      "ville": "Paris",
+      "code_postal": "75008",
+      "id": "4d4f"
+    },{
+      "id_utilisateur": 7,
+      "specialites": [1, 2],
+      "adresse_cabinet": "10 Rue des Fleurs",
+      "ville": "Paris",
+      "code_postal": "75010",
+      "id": "d7a1"
+    },
+    {
+      "id_utilisateur": 8,
+      "specialites": [1, 3],
+      "adresse_cabinet": "22 Avenue Montaigne",
+      "ville": "Paris",
+      "code_postal": "75008",
+      "id": "d7a2"
+    },
+    {
+      "id_utilisateur": 9,
+      "specialites": [3, 5],
+      "adresse_cabinet": "34 Boulevard Saint-Germain",
+      "ville": "Paris",
+      "code_postal": "75005",
+      "id": "d7a3"
+    },
+    {
+      "id_utilisateur": 10,
+      "specialites": [2, 4],
+      "adresse_cabinet": "5 Place de la République",
+      "ville": "Paris",
+      "code_postal": "75011",
+      "id": "d7a4"
+    },
+    {
+      "id_utilisateur": 11,
+      "specialites": [1, 5],
+      "adresse_cabinet": "12 Rue du Faubourg",
+      "ville": "Paris",
+      "code_postal": "75009",
+      "id": "d7a5"
+    },
+    {
+      "id_utilisateur": 12,
+      "specialites": [4],
+      "adresse_cabinet": "8 Rue de la Convention",
+      "ville": "Paris",
+      "code_postal": "75015",
+      "id": "d7a6"
+    },
+    {
+      "id_utilisateur": 13,
+      "specialites": [3],
+      "adresse_cabinet": "45 Rue Montmartre",
+      "ville": "Paris",
+      "code_postal": "75002",
+      "id": "d7a7"
+    },
+    {
+      "id_utilisateur": 14,
+      "specialites": [2, 3, 5],
+      "adresse_cabinet": "20 Rue de Lille",
+      "ville": "Paris",
+      "code_postal": "75007",
+      "id": "d7a8"
+    },
+    {
+      "id_utilisateur": 15,
+      "specialites": [1, 4],
+      "adresse_cabinet": "6 Rue du Bac",
+      "ville": "Paris",
+      "code_postal": "75007",
+      "id": "d7a9"
+    },
+    {
+      "id_utilisateur": 16,
+      "specialites": [5],
+      "adresse_cabinet": "2 Rue Oberkampf",
+      "ville": "Paris",
+      "code_postal": "75011",
+      "id": "d7b0"
     }
+
   ],
   "rendezvous": [
     {
@@ -153,6 +412,72 @@
       "status": "annulé",
       "motif": "Douleur au dos",
       "createdAt": "2024-11-29T12:30:00Z"
+    },
+    {
+      "id": "3",
+      "idDocteur": 4,
+      "idClient": "fa30",
+      "date": "2024-12-20T00:00:00Z",
+      "heureDebut": "2024-12-20T14:00:00Z",
+      "heureFin": "2024-12-20T14:30:00Z",
+      "status": "confirmé",
+      "motif": "Consultation dermatologique",
+      "createdAt": "2024-12-18T14:30:00Z"
+    },
+    {
+      "id": "4",
+      "idDocteur": 6,
+      "idClient": "1dc7",
+      "date": "2024-12-22T00:00:00Z",
+      "heureDebut": "2024-12-22T11:00:00Z",
+      "heureFin": "2024-12-22T11:30:00Z",
+      "status": "confirmé",
+      "motif": "Consultation orthopédique",
+      "createdAt": "2024-12-19T12:00:00Z"
+    },
+    {
+      "id": "7da8",
+      "idDocteur": 2,
+      "idClient": "d79a",
+      "date": "2024-12-06",
+      "heureDebut": "2024-12-06T01:01:00.000Z",
+      "heureFin": "2024-12-06T02:01:00.000Z",
+      "motif": "ddddd",
+      "status": "confirmé",
+      "createdAt": "2024-12-19T18:31:24.809Z"
+    },
+    {
+      "id": "bc1a",
+      "idDocteur": 4,
+      "idClient": "d79a",
+      "date": "2024-12-13",
+      "heureDebut": "2024-12-13T01:02:00.000Z",
+      "heureFin": "2024-12-13T02:02:00.000Z",
+      "motif": "sss",
+      "status": "confirmé",
+      "createdAt": "2024-12-19T19:43:28.694Z"
+    },
+    {
+      "id": "5310",
+      "idDocteur": 4,
+      "idClient": "d79a",
+      "date": "2024-12-20",
+      "heureDebut": "2024-12-20T12:13:00.000Z",
+      "heureFin": "2024-12-20T13:13:00.000Z",
+      "motif": "pipi",
+      "status": "confirmé",
+      "createdAt": "2024-12-19T20:03:45.482Z"
+    },
+    {
+      "id": "3f11",
+      "idDocteur": 5,
+      "idClient": "d79a",
+      "date": "2024-12-21",
+      "heureDebut": "2024-12-21T12:01:00.000Z",
+      "heureFin": "2024-12-21T13:01:00.000Z",
+      "motif": "zertyuio",
+      "status": "confirmé",
+      "createdAt": "2024-12-19T20:04:54.869Z"
     }
   ]
 }

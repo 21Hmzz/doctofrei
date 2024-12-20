@@ -9,7 +9,7 @@ import { AddressFormatterPipe } from '../address-formater-pipe';
   styleUrls: ['./page-docteurs.component.css']
 })
 export class PageDocteursComponent {
-  
+
   docteurs: DocteurComplet[] = [];
   isLoading = true;
 

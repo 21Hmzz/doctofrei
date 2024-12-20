@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SpecialiteService } from '../services/specialite.service';
 import { Specialite } from 'src/database/types';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-specialites',
   templateUrl: './specialites.component.html',
@@ -10,7 +12,7 @@ export class SpecialitesComponent implements OnInit {
 
   specialites: Specialite[] = [];
 
-  constructor(private specialiteService: SpecialiteService) {}
+  constructor(private specialiteService: SpecialiteService, private router: Router) {}
 
   ngOnInit(): void {
     // Appel au service pour récupérer les spécialités
@@ -22,5 +24,9 @@ export class SpecialitesComponent implements OnInit {
         console.error('Erreur de récupération des spécialités : ', err);
       }
     });
+  }
+
+  viewDoctors(specialtyId: string) {
+    this.router.navigate(['/specialty', specialtyId]);
   }
 }

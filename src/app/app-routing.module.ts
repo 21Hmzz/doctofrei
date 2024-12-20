@@ -13,6 +13,7 @@ import { SpecialitesComponent } from './specialites/specialites.component';
 import { DoctorProfileEditComponent } from './doctor-profile-edit/doctor-profile-edit.component';
 import { PatientProfileEditComponent } from './patient-profile-edit/patient-profile-edit.component';
 import { PageDocteursComponent } from './page-docteurs/page-docteurs.component';
+import { DoctorsBySpecialtyComponent } from './doctors-by-specialty/doctors-by-specialty.component';
 
 const routes: Routes = [
   {
@@ -65,6 +66,11 @@ const routes: Routes = [
     path: 'page-doctors',
     component: PageDocteursComponent
   },
+  {
+    path: 'specialty/:id',
+    component: DoctorsBySpecialtyComponent,
+  },
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
